@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProxyTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProxyTool"
+        xmlns:hc="https://handyorg.github.io/handycontrol" 
+        mc:Ignorable="d" WindowStyle="None" Background="Transparent"
+        Title="MainWindow" Height="0" Width="0" Icon="/Resources/icon.ico" Loaded="Window_Loaded">
+    <Grid>
+        <hc:NotifyIcon Icon="/Resources/icon.ico" Name="notifyIcon" Visibility="Visible">
+            <hc:NotifyIcon.ContextMenu>
+                <ContextMenu Width="180">
+                    <MenuItem Header="Version：1.0.0" BorderThickness="0,0,0,1" BorderBrush="#dbdbdb" />
+                    <MenuItem Name="menuItem_ie" Click="CheckIEProxyStatus"  Header="IE Proxy" />
+                    <!--<MenuItem Name="menuItem_fx" Click="CheckIEProxyStatus"  Header="FireFox Proxy"/>-->
+                    <MenuItem Command="hc:ControlCommands.ShutdownApp" Header="Exit" BorderThickness="0,1,0,0" BorderBrush="#dbdbdb"/>
+                </ContextMenu>
+            </hc:NotifyIcon.ContextMenu>
+        </hc:NotifyIcon>
+    </Grid>
+</Window>
